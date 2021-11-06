@@ -19,7 +19,7 @@ const copyAllFiles = (src, dest) => {
   })
 }
 
-fs.promises.rm(destinationPath, {recursive: true}).then(() => {
+fs.promises.rm(destinationPath, {recursive: true, force: true}).then(() => {
   return fs.promises.mkdir(destinationPath, {recursive: true});
 }).then(() => {
   return copyAllFiles(sourcePath, destinationPath);
