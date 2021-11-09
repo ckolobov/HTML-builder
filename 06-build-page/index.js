@@ -70,7 +70,7 @@ const getHTML = (name, obj) => {
 const prepareHTML = () => {
   const templatePath = `${__dirname}/template.html`;
   const destinationFile = `${__dirname}/project-dist/index.html`;
-  const regexp = /\{\{(.+)\}\}/g;
+  const regexp = /\{\{([^\}]+)\}\}/g;
   const AllHTML = {};
   const promises = [];
   let template;
